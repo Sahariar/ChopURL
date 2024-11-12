@@ -20,7 +20,7 @@ class UrlResource extends JsonResource
             'short_url' => url($this->short_url),
             'visit_count' => $this->visit_count,
             'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at
+            'updated_at' => $this->updated_at,
         ];
     }
 }

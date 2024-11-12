@@ -12,4 +12,9 @@ class Url extends Model
 
     //
     protected $fillable =['long_url','short_url','user_id' , 'visit_count'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
