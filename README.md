@@ -26,12 +26,12 @@
 - [Laravel](https://laravel.com/) (v8 or later)
 - [MySQL](https://www.mysql.com/) or any compatible database
 
-### Api EndPoint
+## Api EndPoint
 
 
 Here's a breakdown of what the endpoints would look like in v1 and v2 along with example URLs for each:
 
-### v1 Endpoints
+## v1 Endpoints
 User Registration
 
 Endpoint: POST /api/v1/register
@@ -57,7 +57,8 @@ Redirect to Original URL (Public)
 Endpoint: GET /api/v1/url/{shortUrl}
 Example: GET http://yourdomain.com/api/v1/url/abc123
 Purpose: Redirects the browser from the shortened URL to the original long URL. This route does not require authentication.
-#### v2 Endpoints
+
+## v2 Endpoints
 v2 includes all v1 functionality but adds additional tracking capabilities.
 
 List User URLs (Authenticated, Same as v1)
@@ -76,13 +77,13 @@ Endpoint: GET /api/v2/url/view/{id}
 Example: GET http://yourdomain.com/api/v2/url/view/1
 Purpose: Returns details of the URL (including visit count). id here would be the unique identifier for the URL in the database.
 Summary of Example Endpoints
-### v1
+## v1
 POST /api/v1/register - Register a user
 POST /api/v1/login - Login a user (get API key)
 POST /api/v1/shorten - Shorten a long URL
 GET /api/v1/urls - List all URLs by the user
 GET /api/v1/url/{shortUrl} - Redirect to long URL
-### v2
+## v2
 POST /api/v2/register - Register a user
 POST /api/v2/login - Login a user (get API key)
 POST /api/v2/shorten - Shorten a long URL
