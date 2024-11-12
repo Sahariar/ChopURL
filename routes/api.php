@@ -12,8 +12,8 @@ Route::prefix('v1')->group(function () {
 
     Route::middleware('auth:sanctum')->group(function () {
         Route::post('/shorten', [UrlController::class, 'shorten']);
-        Route::post('/url', [UrlController::class, 'index']);
-        Route::post('/url/{shorten}', [UrlController::class, 'redirect']);
+        Route::get('/url', [UrlController::class, 'index']);
+        Route::get('/url/{shorten}', [UrlController::class, 'redirect']);
     });
 });
 
@@ -24,8 +24,8 @@ Route::prefix('v2')->group(function () {
 
     Route::middleware('auth:sanctum')->group(function () {
         Route::post('/shorten', [UrlController::class, 'shorten']);
-        Route::post('/url', [UrlController::class, 'index']);
-        Route::post('/url/{shorten}', [UrlController::class, 'redirect']);
-        Route::post('/url/{id}', [UrlController::class, 'show']);
+        Route::get('/url', [UrlController::class, 'index']);
+        Route::get('/url/{shorten}', [UrlController::class, 'redirect']);
+        Route::get('/url/view/{id}', [UrlController::class, 'show']);
     });
 });

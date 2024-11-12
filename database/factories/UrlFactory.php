@@ -23,7 +23,7 @@ class UrlFactory extends Factory
         return [
             'long_url' => $this->faker->url,
             'short_url' => Str::random(6),
-            'user_id' => User::inRamdomOrder()->first()->id ?? User::factory(),
+            'user_id' => User::inRandomOrder()->first()->id ?? User::factory(),
             'visit_count' => $this->faker->numberBetween(0,100),
         ];
     }
